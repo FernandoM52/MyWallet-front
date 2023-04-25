@@ -1,13 +1,24 @@
 import styled from "styled-components"
 import { BiExit } from "react-icons/bi"
 import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai"
+import { Link, useNavigate } from "react-router-dom"
 
 export default function HomePage() {
+  const navigate = useNavigate();
+
+  function newTransaction(type) {
+    navigate(`/nova-transacao/${type}`)
+  }
+
+  function handleLogoff() {
+    navigate("/");
+  }
+
   return (
     <HomeContainer>
       <Header>
         <h1>Olá, Fulano</h1>
-        <BiExit />
+        <BiExit onClick={handleLogoff} />
       </Header>
 
       <TransactionsContainer>
@@ -37,11 +48,11 @@ export default function HomePage() {
 
 
       <ButtonsContainer>
-        <button>
+        <button onClick={() => newTransaction("entrada")}>
           <AiOutlinePlusCircle />
           <p>Nova <br /> entrada</p>
         </button>
-        <button>
+        <button onClick={() => newTransaction("saida")}>
           <AiOutlineMinusCircle />
           <p>Nova <br />saída</p>
         </button>
