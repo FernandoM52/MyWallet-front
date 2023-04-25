@@ -12,7 +12,7 @@ export default function TransactionsPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const currentToken = localStorage.getItem("sessions");
+    const currentToken = localStorage.getItem("user");
     if (currentToken) {
       setUser(JSON.parse(currentToken));
     } else {
@@ -28,8 +28,7 @@ export default function TransactionsPage() {
     e.preventDefault();
 
     const body = {
-      ...form, value: (Number(parseFloat(form.value).toFixed(2)) * 100),
-      type: params.type
+      ...form, value: (Number(parseFloat(form.value).toFixed(2)) * 100), type: params.type === "entrada" ? "entrada" : "saida"
     };
 
     const config = {
