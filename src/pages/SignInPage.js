@@ -8,9 +8,9 @@ import styled from "styled-components"
 
 export default function SignInPage() {
   const [form, setForm] = useState({ email: "", password: "" })
-  const { user, setUser } = useContext(UserContext);
+  const { setUser } = useContext(UserContext);
   const navigate = useNavigate();
-  console.log(user)
+
   function handleForm(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
