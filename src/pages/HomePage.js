@@ -3,7 +3,7 @@ import { AiOutlineMinusCircle, AiOutlinePlusCircle } from "react-icons/ai"
 import { useNavigate } from "react-router-dom"
 import { useContext, useEffect, useState } from "react"
 import { UserContext } from "../contexts/userContext"
-import apiExtract from "../services/apiExtract"
+import apiTransaction from "../services/apiTransactions"
 import TransactionItem from "../components/TransactionItem"
 import styled from "styled-components"
 
@@ -15,21 +15,24 @@ export default function HomePage() {
   useEffect(getExtractList, []);
 
   function getExtractList() {
-    apiExtract.getExtract(user.token)
+    apiTransaction.getExtract(user.token)
       .then(res => {
         console.log(res.data)
         setExtract(res.data);
       })
-      .catch(err => alert(err.response.data.message))
+      .catch(err => {
+        if (!user.token) {
+          alert("Faça login.");
+        } else {
+          alert(err.response.data);
+        }
+      })
   }
 
-  function newTransaction(type) {
-    navigate(`/nova-transacao/${type}`)
-  }
-
-  function handleLogoff() {
-    navigate("/");
-  }
+  const handleLogoff = () => {
+    localStorage.clear();
+    window.location.reload();
+  };
 
   return (
     <HomeContainer>
@@ -40,15 +43,20 @@ export default function HomePage() {
 
       <TransactionsContainer>
         <ul>
-          {extract.map(transaction => (
-            <TransactionItem
-              key={transaction._id}
-              date={transaction.date}
-              description={transaction.description}
-              type={transaction.type}
-              value={transaction.value}
-            />
-          ))}
+          {extract.length === 0 ? (
+            <p>Não há registros de
+              entrada ou saída</p>
+          ) : (
+            extract.map(transaction => (
+              <TransactionItem
+                key={transaction._id}
+                date={transaction.date}
+                description={transaction.description}
+                type={transaction.type}
+                value={transaction.value}
+              />
+            ))
+          )}
         </ul>
 
         <article>
@@ -59,11 +67,11 @@ export default function HomePage() {
 
 
       <ButtonsContainer>
-        <button onClick={() => newTransaction("entrada")}>
+        <button onClick={() => navigate("/nova-transacao/entrada")}>
           <AiOutlinePlusCircle />
           <p>Nova <br /> entrada</p>
         </button>
-        <button onClick={() => newTransaction("saida")}>
+        <button onClick={() => navigate("/nova-transacao/saida")}>
           <AiOutlineMinusCircle />
           <p>Nova <br />saída</p>
         </button>
@@ -86,6 +94,9 @@ const Header = styled.header`
   margin-bottom: 15px;
   font-size: 26px;
   color: white;
+  ion-icon{
+    cursor: pointer;
+  }
 `
 const TransactionsContainer = styled.article`
   flex-grow: 1;

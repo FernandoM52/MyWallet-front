@@ -17,9 +17,9 @@ export default function SignUpPage() {
     e.preventDefault();
 
     if (form.password !== form.confirmPassword) return alert("As senhas não coincidem. Os valores de senha precisam ser idênticos.");
-    delete form.confirmPassword;
+    const body = { name: form.name, email: form.email, password: form.password }
 
-    apiAuth.signup(form)
+    apiAuth.signup(body)
       .then(res => {
         alert(res.data);
         navigate("/");
