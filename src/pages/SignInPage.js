@@ -1,13 +1,16 @@
-import styled from "styled-components"
 import { Link, useNavigate } from "react-router-dom"
+import { useContext, useState } from "react";
+import { UserContext } from "../contexts/userContext";
 import MyWalletLogo from "../components/MyWalletLogo"
 import apiAuth from "../services/apiAuth";
-import { useState } from "react";
+import styled from "styled-components"
+
 
 export default function SignInPage() {
   const [form, setForm] = useState({ email: "", password: "" })
+  const { user, setUser } = useContext(UserContext);
   const navigate = useNavigate();
-
+  console.log(user)
   function handleForm(e) {
     setForm({ ...form, [e.target.name]: e.target.value });
   }
@@ -17,11 +20,13 @@ export default function SignInPage() {
 
     apiAuth.login(form)
       .then(res => {
-        console.log(res.data);
+        const { token, userId, name } = res.data;
+        setUser({ token, userId, name });
         navigate("/home");
       })
       .catch(err => alert(err.response.data.message))
   }
+
   return (
     <SingInContainer>
       <form onSubmit={handleLogin}>
