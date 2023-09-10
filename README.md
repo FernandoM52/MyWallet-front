@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# My Wallet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+My Wallet is a finance manager that simplifies control of your revenues and expenses. With an intuitive interface, My Wallet allows you to quickly maintain full control of your personal finances.
 
-## Available Scripts
+<div style="backgroundcolor:black" align="center">
+  
+![My-Wallet-Print](https://github.com/FernandoM52/MyWallet-front/assets/81760656/1d403b29-7b2b-408e-8747-04136680f7ac)
+</div>
 
-In the project directory, you can run:
+You can try it out at https://my-wallet-front-gxyvm2f8o-fernandom52.vercel.app/
 
-### `npm start`
+## About this Project
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+My Wallet is a web application to help individuals efficiently manage their finances. With this app, users can effortlessly gain insights into their spending habits, track their income and expenses, and maintain a real-time balance overview. Whether you're looking to gain a better understanding of your financial choices or simply stay on top of your financial health, My Wallet provides the tools and insights you need.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Implemented features:
+- Sign Up
+- Login
+- List of all user transactions
+- Add an expense
+- Add an revenue
 
-### `npm test`
+Next steps:
+- Edit an transaction
+- Delete an transaction
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Why
 
-### `npm run build`
+My Wallet was my first Full-Stack project. It was also my second project using a non-relational database, which was a topic I was studying at the time and for that I found the choice of MongoDB interesting.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+So, I'm very grateful to made it and share this project, hope be very useful to you. Enjoy! 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Technologies
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The following technologies were used to develop this project:
 
-### `npm run eject`
+<div>
+  
+  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+  ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
+  ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
+  ![React Router](https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white)
+  ![Axio](https://img.shields.io/badge/Axios-5A29E4.svg?style=for-the-badge&logo=Axios&logoColor=white)
+  
+</div>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## How to run
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+1. Clone this repository
+2. Clone the back-end repository at https://github.com/FernandoM52/MyWallet-back
+3. Follow instructions to run back-end at https://github.com/FernandoM52/MyWallet-back
+4. Install dependencies:
+```
+npm i
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+5. Run the front-end with:
+```
+npm start
+```
 
-## Learn More
+6. You can optionally build the project running
+```
+npm run build
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+7. Finally access http://localhost:3000 on your browser
