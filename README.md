@@ -21,7 +21,7 @@ Implemented features:
 - Add an revenue
 
 Next steps:
-- Fix functionality that shows user's total money dynamically
+- Fix total users money show
 - Edit an transaction
 - Delete an transaction
 
