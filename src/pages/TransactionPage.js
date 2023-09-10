@@ -28,7 +28,7 @@ export default function TransactionsPage() {
     e.preventDefault();
 
     const body = {
-      ...form, value: (Number(parseFloat(form.value).toFixed(2)) * 100), type: params.type === "entrada" ? "entrada" : "saida"
+      ...form, value: (Number(parseFloat(form.value).toFixed(2))), type: params.type === "entrada" ? "entrada" : "saida"
     };
 
     const config = {
