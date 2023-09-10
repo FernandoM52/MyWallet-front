@@ -7,8 +7,6 @@ My Wallet is a finance manager that simplifies control of your revenues and expe
 ![My-Wallet-Print](https://github.com/FernandoM52/MyWallet-front/assets/81760656/1d403b29-7b2b-408e-8747-04136680f7ac)
 </div>
 
-You can try it out at https://my-wallet-front-gxyvm2f8o-fernandom52.vercel.app/
-
 ## About this Project
 
 My Wallet is a web application to help individuals efficiently manage their finances. With this app, users can effortlessly gain insights into their spending habits, track their income and expenses, and maintain a real-time balance overview. Whether you're looking to gain a better understanding of your financial choices or simply stay on top of your financial health, My Wallet provides the tools and insights you need.
@@ -16,6 +14,7 @@ My Wallet is a web application to help individuals efficiently manage their fina
 Implemented features:
 - Sign Up
 - Login
+- Logout
 - List of all user transactions
 - Add an expense
 - Add an revenue
@@ -53,22 +52,30 @@ The following technologies were used to develop this project:
 
 ## How to run
 
-1. Clone this repository
-2. Clone the back-end repository at https://github.com/FernandoM52/MyWallet-back
-3. Follow instructions to run back-end at https://github.com/FernandoM52/MyWallet-back
-4. Install dependencies:
+To run this project in the development mode, you'll need to the server running locally on your machine. You can find the server and all the instructions to start the server <a href="https://github.com/FernandoM52/MyWallet-back" target="_blank">here<a/>
+
+<h3>Connecting the App with the Api</h3>
+
+1. Follow the instructions on the <a href="https://github.com/FernandoM52/MyWallet-back" target="_blank">my-wallet-back</a> to have the server up and running on your machine.
+
+<h3>Running</h3>
+
+1. With the back-end up and running, clone this repository and install the dependencies:
 ```
+git clone https://github.com/FernandoM52/MyWallet-front.git
+
+cd MyWallet-front
+
 npm i
 ```
+2. Create a `/.env` file and add the environment variable `REACT_APP_API_URL` with the address where your api is running, like this:
 
-5. Run the front-end with:
+```
+REACT_APP_API_URL=http://localhost:3000
+```
+
+3. Run the front-end with:
+
 ```
 npm start
 ```
-
-6. You can optionally build the project running
-```
-npm run build
-```
-
-7. Finally access http://localhost:3000 on your browser
