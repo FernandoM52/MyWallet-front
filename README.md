@@ -21,8 +21,14 @@ Implemented features:
 - Add an revenue
 
 Next steps:
+- Fix functionality that shows user's total money dynamically
 - Edit an transaction
 - Delete an transaction
+
+Some Observations about this App
+
+1. There is a feature on the main screen that shows the user's initial/total money, but it is fixed. So the value is not being calculated dynamically.
+
 
 ## Why
 
