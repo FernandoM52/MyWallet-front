@@ -28,7 +28,6 @@ Some Observations about this App
 
 1. There is a feature on the main screen that shows the user's initial/total money, but it is fixed. So the value is not being calculated dynamically.
 
-
 ## Why
 
 My Wallet was my first Full-Stack project. It was also my second project using a non-relational database, which was a topic I was studying at the time and for that I found the choice of MongoDB interesting.
@@ -45,14 +44,14 @@ The following technologies were used to develop this project:
   ![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
   ![Styled Components](https://img.shields.io/badge/styled--components-DB7093?style=for-the-badge&logo=styled-components&logoColor=white)
   ![React Router](https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white)
-  ![Axio](https://img.shields.io/badge/Axios-5A29E4.svg?style=for-the-badge&logo=Axios&logoColor=white)
-  
+  ![Axios](https://img.shields.io/badge/Axios-5A29E4.svg?style=for-the-badge&logo=Axios&logoColor=white)
+  ![Env](https://img.shields.io/badge/.ENV-ECD53F.svg?style=for-the-badge&logo=dotenv&logoColor=black)
 </div>
 
 
 ## How to run
 
-To run this project in the development mode, you'll need to the server running locally on your machine. You can find the server and all the instructions to start the server <a href="https://github.com/FernandoM52/MyWallet-back" target="_blank">here<a/>
+To run this project in the development mode, you'll need to the server running locally on your machine. You can find the server and all the instructions to start the server <a href="https://github.com/FernandoM52/MyWallet-back" target="_blank">here<a/>.
 
 <h3>Connecting the App with the Api</h3>
 
