@@ -11,7 +11,7 @@ My Wallet is a finance manager that simplifies control of your revenues and expe
 
 My Wallet is a web application to help individuals efficiently manage their finances. With this app, users can effortlessly gain insights into their spending habits, track their income and expenses, and maintain a real-time balance overview. Whether you're looking to gain a better understanding of your financial choices or simply stay on top of your financial health, My Wallet provides the tools and insights you need.
 
-Implemented features:
+<h3>Implemented features:</h3>
 - Sign Up
 - Login
 - Logout
@@ -19,12 +19,12 @@ Implemented features:
 - Add an expense
 - Add an revenue
 
-Next steps:
+<h3>Next steps:</h3>
 - Fix total users money show
 - Edit an transaction
 - Delete an transaction
 
-Some Observations about this App
+<h3>Some observations about this App:</h3>
 
 1. There is a feature on the main screen that shows the user's initial/total money, but it is fixed. So the value is not being calculated dynamically.
 
