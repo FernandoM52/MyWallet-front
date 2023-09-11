@@ -62,6 +62,7 @@ To run this project in the development mode, you'll need to the server running l
 <h3>Running</h3>
 
 1. With the back-end up and running, clone this repository and install the dependencies:
+
 ```
 git clone https://github.com/FernandoM52/MyWallet-front.git
 
@@ -69,6 +70,7 @@ cd MyWallet-front
 
 npm i
 ```
+
 2. Create a `/.env` file and add the environment variable `REACT_APP_API_URL` with the address where your api is running, like this:
 
 ```
